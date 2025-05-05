@@ -1,7 +1,7 @@
-'''
+"""
 To use this script, you have to have a username and password for lichess.org.
 You also have to enable keyboard input in the lichess.org settings.
-'''
+"""
 
 import asyncio
 import os
@@ -16,11 +16,11 @@ load_dotenv()
 
 # Check if OpenAI API key is set
 if not os.getenv('OPENAI_API_KEY'):
-    raise ValueError('OPENAI_API_KEY is not set. Add it to your .env file.')
+	raise ValueError('OPENAI_API_KEY is not set. Add it to your .env file.')
 
 llm = ChatOpenAI(
-    model='gpt-4o', 
-    temperature=0.2, 
+	model='gpt-4o',
+	temperature=0.2,
 )
 
 # Replace YOURUSERNAME and YOURPASSWORD with your actual lichess username and password
@@ -56,15 +56,17 @@ If you see an option to input moves by keyboard, feel free to use it. Otherwise,
 
 # Initialize the agent with visible browser
 agent = Agent(
-    task=task,
-    llm=llm,
-    browser=Browser(config=BrowserConfig(headless=False)),  # Set headless=False to see the browser
+	task=task,
+	llm=llm,
+	browser=Browser(config=BrowserConfig(headless=False)),  # Set headless=False to see the browser
 )
 
+
 async def main():
-    # Run the agent
-    await agent.run()
+	# Run the agent
+	await agent.run()
+
 
 if __name__ == '__main__':
-    asyncio.run(main()) 
+	asyncio.run(main()) 
     
