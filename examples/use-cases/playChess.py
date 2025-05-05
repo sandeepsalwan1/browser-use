@@ -3,9 +3,9 @@ To use this script, you have to have a username and password for lichess.org.
 You also have to enable keyboard input in the lichess.org settings.
 '''
 
-import os
-import sys
 import asyncio
+import os
+
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 
