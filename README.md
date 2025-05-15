@@ -1,34 +1,59 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./static/browser-use-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./static/browser-use.png">
-  <img alt="Shows a black Browser Use Logo in light color mode and a white one in dark color mode." src="./static/browser-use.png"  width="full">
-</picture>
+# Audio Waveform Visualizer
 
-<h1 align="center">Enable AI to control your browser 🤖</h1>
+This script automatically fetches sound effects from Mixkit.co and creates beautiful waveform visualizations from the audio.
 
-[![GitHub stars](https://img.shields.io/github/stars/gregpr07/browser-use?style=social)](https://github.com/gregpr07/browser-use/stargazers)
-[![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
-[![Cloud](https://img.shields.io/badge/Cloud-☁️-blue)](https://cloud.browser-use.com)
-[![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://docs.browser-use.com)
-[![Twitter Follow](https://img.shields.io/twitter/follow/Gregor?style=social)](https://x.com/gregpr07)
-[![Twitter Follow](https://img.shields.io/twitter/follow/Magnus?style=social)](https://x.com/mamagnus00)
-[![Weave Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fapp.workweave.ai%2Fapi%2Frepository%2Fbadge%2Forg_T5Pvn3UBswTHIsN1dWS3voPg%2F881458615&labelColor=#EC6341)](https://app.workweave.ai/reports/repository/org_T5Pvn3UBswTHIsN1dWS3voPg/881458615)
+## Features
 
-🌐 Browser-use is the easiest way to connect your AI agents with the browser.
+- Browses and downloads free sound effects from Mixkit.co
+- Creates waveform visualizations of audio files
+- Supports multiple visualization styles (bars, wave, outline)
+- No login or authentication required
+- Saves both audio files and visualizations locally
 
-💡 See what others are building and share your projects in our [Discord](https://link.browser-use.com/discord)! Want Swag? Check out our [Merch store](https://browsermerch.com).
+## Requirements
 
-🌤️ Skip the setup - try our <b>hosted version</b> for instant browser automation! <b>[Try the cloud ☁︎](https://cloud.browser-use.com)</b>.
+- Python 3.8+
+- Required Python packages:
+  - browser-use
+  - langchain-openai
+  - OpenAI API key
 
-# Quick start
+## Installation
 
-With pip (Python>=3.11):
+1. Clone this repository or download the files.
+2. Install the required Python packages:
+# Audio Waveform Visualizer
+
+This script automatically fetches sound effects from Mixkit.co and creates beautiful waveform visualizations from the audio.
+
+## Features
+
+- Browses and downloads free sound effects from Mixkit.co
+- Creates waveform visualizations of audio files
+- Supports multiple visualization styles (bars, wave, outline)
+- No login or authentication required
+- Saves both audio files and visualizations locally
+
+## Requirements
+
+- Python 3.8+
+- Required Python packages:
+  - browser-use
+  - langchain-openai
+  - OpenAI API key
+
+## Installation
+
+1. Clone this repository or download the files.
+2. Install the required Python packages:
 
 ```bash
-pip install browser-use
+pip install browser-use langchain-openai
+pip install browser-use langchain-openai
 ```
 
-For memory functionality (requires Python<3.13 due to PyTorch compatibility):  
+3. Set up your OpenAI API key as an environment variable:
+3. Set up your OpenAI API key as an environment variable:
 
 ```bash
 pip install "browser-use[memory]"
